@@ -13,7 +13,7 @@ import com.loc.newsapp.domain.usecases.app_entry.AppEntryUseCases
 import com.loc.newsapp.domain.usecases.app_entry.ReadAppEntry
 import com.loc.newsapp.domain.usecases.app_entry.SaveAppEntry
 import com.loc.newsapp.domain.usecases.news.GetNews
-import com.loc.newsapp.domain.usecases.news.NewsUsesCase
+import com.loc.newsapp.domain.usecases.news.NewsUseCases
 import com.loc.newsapp.util.Constants.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -56,8 +56,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideNewsUseCases(newsRepository: NewsRepository):NewsUsesCase {
-        return NewsUsesCase(
+    fun provideNewsUseCases(newsRepository: NewsRepository):NewsUseCases {
+        return NewsUseCases(
             getNews = GetNews(newsRepository)
         )
     }

@@ -5,7 +5,7 @@
         <item name="windowSplashScreenBackground">#1C1E21</item>
 
         <!-- Use the app icon as the splash screen icon -->
-        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
 
         <!-- Set the splash screen animation duration -->
         <item name="windowSplashScreenAnimationDuration">300</item>

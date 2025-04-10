@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
+import com.loc.newsapp.presentation.home.HomeViewModel
 import com.loc.newsapp.presentation.nvgraph.Route
 import com.loc.newsapp.presentation.onboarding.OnBoardingScreen
 import com.loc.newsapp.presentation.onboarding.component.OnBoardingViewModel
@@ -38,6 +39,8 @@ fun NavGraph(
             startDestination = Route.NewsNavigatorScreen.route
         ){
             composable(route = Route.NewsNavigatorScreen.route){
+                val viewModel: HomeViewModel = hiltViewModel()
+                val articles = viewModel.news
                 Text(text = "NewsNavigator Screen")
             }
         }
